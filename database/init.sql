@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS users (
+ id SERIAL PRIMARY KEY,
+ name VARCHAR(100) NOT NULL,
+ email VARCHAR(255) NOT NULL UNIQUE,
+ password_hash TEXT NOT NULL,
+ created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE TABLE IF NOT EXISTS reviews (
+ id SERIAL PRIMARY KEY,
+ user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+ movie_id INTEGER NOT NULL CHECK (movie_id > 0),
+ rating INTEGER NOT NULL CHECK (rating BETWEEN 1 AND 5),
+ comment TEXT NOT NULL,
+ created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+ updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+ UNIQUE(user_id,movie_id)
+);
+CREATE INDEX IF NOT EXISTS reviews_movie_idx ON reviews(movie_id);
+CREATE INDEX IF NOT EXISTS reviews_user_idx ON reviews(user_id);

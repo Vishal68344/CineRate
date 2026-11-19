@@ -1,0 +1,1 @@
+export default function Footer(){return <footer className="border-t border-white/10 mt-20 py-9 text-center muted text-sm">© {new Date().getFullYear()} CineRate · Discover films. Share your story. · Movie data by TMDB (not endorsed or certified by TMDB).</footer>}

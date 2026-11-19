@@ -1,0 +1,1 @@
+import {Link} from 'react-router-dom';export default function NotFound(){return <main className="section text-center py-32"><h1 className="text-7xl font-extrabold text-accent">404</h1><p className="muted mt-4">This scene doesn't exist.</p><Link to="/" className="btn mt-6">Back home</Link></main>}
