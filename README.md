@@ -1,6 +1,16 @@
 # CineRate 🎬
 Full-stack movie discovery, rating and review app built with React, Vite, Tailwind, Express and PostgreSQL.
 
+## 🌐 Live Demo
+
+**CineRate is deployed on AWS EC2 using Docker and Docker Compose.**
+
+🎬 **Live Website:** [http://15.206.186.136:8081](http://15.206.186.136:8081)
+
+**Tech Stack:** React, Vite, Node.js, Express, PostgreSQL, Docker, AWS EC2.
+
+> Note: The live demo is available while the AWS EC2 instance is running.
+
 ## Requirements
 Node.js 22+, npm, PostgreSQL 15+, a [TMDB API key](https://www.themoviedb.org/settings/api).
 
