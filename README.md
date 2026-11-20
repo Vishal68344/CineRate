@@ -55,5 +55,5 @@ npm run build
 - POST `/api/movies/:id/reviews`, PUT/DELETE `/api/reviews/:id`
 - GET `/api/users/me/reviews`, GET `/api/health`
 
-## Deployment notes
+## Deployment notes.
 This repository contains application code only. Docker, CI/CD, Terraform, ECR and AWS deployment will be added separately. In production serve frontend through Nginx, proxy `/api` to backend, and use `VITE_API_URL=/api` at frontend build time. Keep secrets out of source control. This starter stores JWT in localStorage for simplicity; for stronger production security, migrate to secure HttpOnly cookies and CSRF protection..
